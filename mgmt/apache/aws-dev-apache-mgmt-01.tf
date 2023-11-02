@@ -1,21 +1,15 @@
-provider "aws" {
-  access_key = "AKIA57K4OIW7NOBQMXXP"
-  secret_key = "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"
-  region     = "eu-west-3"
-}
-
-resource "aws_instance" "onx-aws-dev-apache-mgmt-01" {
+resource "aws_instance" "aws-dev-apache-mgmt-01" {
   ami = "ami-008bcc0a51a849165"
   instance_type = "t2.micro"
   subnet_id     = "subnet-04bb61d08ddcbae8b"
-  key_name        		 = "onx-aws-key-smarmouri"
+  key_name        		 = "aws-key-smarmouri"
   monitoring             = true
   vpc_security_group_ids = [
     "sg-0a71265245ca5a316",
   ]
   user_data = file("install_apache.sh")
   tags = {
-    Name = "onx-aws-dev-apache-mgmt-01"
+    Name = "aws-dev-apache-mgmt-01"
     mounting = "terraform"
     env = "mgmt"
     ami = "ubuntu2004"
@@ -26,12 +20,12 @@ resource "aws_instance" "onx-aws-dev-apache-mgmt-01" {
 
 
 ########data apache
-###resource "aws_ebs_volume" "onx-aws-dev-apache-test-01" {
+###resource "aws_ebs_volume" "aws-dev-apache-test-01" {
 ###  availability_zone = "eu-west-1a"
 ###  size              = 50
 ###  type              = "gp2"
 ###  tags = {
-###    Name              = "onx-aws-dev-apache-test-01"
+###    Name              = "aws-dev-apache-test-01"
 ###    Environment       = "test"
 ###  }
 ###}
