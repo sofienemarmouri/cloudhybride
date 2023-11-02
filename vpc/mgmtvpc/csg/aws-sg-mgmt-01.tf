@@ -1,13 +1,7 @@
-provider "aws" {
-  access_key = "AKIA57K4OIW7NOBQMXXP"
-  secret_key = "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"
-  region     = "eu-west-3"
-}
-
-resource "aws_security_group" "onx-aws-sg-mgmt-20" {
+resource "aws_security_group" "aws-sg-mgmt-20" {
   vpc_id       = "vpc-0317680e9bab9e292"
-  name         = "onx-aws-sg-mgmt-01"
-  description  = "onx-aws-sg-mgmt-01"
+  name         = "aws-sg-mgmt-01"
+  description  = "aws-sg-mgmt-01"
 
   # allow ingress all
   ingress {
@@ -25,6 +19,6 @@ resource "aws_security_group" "onx-aws-sg-mgmt-20" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 tags = {
-   Name = "onx-aws-sg-mgmt-01"
+   Name = "aws-sg-mgmt-01"
 }
 }
