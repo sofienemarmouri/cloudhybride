@@ -3,7 +3,7 @@
 #  region  = "eu-west-1"
 #}
 #
-#resource "aws_instance" "onx-aws-dev-kibana-test-01" {
+#resource "aws_instance" "aws-dev-kibana-test-01" {
 #  availability_zone      = "eu-west-1c"
 #  ami                    = "ami-08a3bf0ca5cb00159"
 #  instance_type          = "t3.small"
@@ -14,7 +14,7 @@
 #  ]
 #  user_data = file("install_kibana.sh")
 #  tags          = {
-#    Name              = "onx-aws-dev-kibana-test-01"
+#    Name              = "aws-dev-kibana-test-01"
 #    environment       = "production"
 #    shutdown_nightly  = "false"
 #    startup_daily     = "true"
