@@ -1,8 +1,3 @@
-provider "aws" {
-  access_key = "AKIA57K4OIW7NOBQMXXP"
-  secret_key = "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"
-  region     = "eu-west-3"
-}
 #mettre à jour les deux adresse ip sans health check pour tester notre failover dns
 #failover
 resource "aws_route53_record" "primary" {
