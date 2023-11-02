@@ -1,10 +1,4 @@
-provider "aws" {
-  access_key = "AKIA57K4OIW7NOBQMXXP"
-  secret_key = "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"
-  region     = "eu-west-3"
-}
-
-resource "aws_network_acl" "onx-aws-nacl-mgmt-01" {
+resource "aws_network_acl" "aws-nacl-mgmt-01" {
   vpc_id = "vpc-0317680e9bab9e292"
 
 # allow ingress all
@@ -28,7 +22,7 @@ resource "aws_network_acl" "onx-aws-nacl-mgmt-01" {
   }
 
 tags = {
-    Name = "onx-aws-nacl-mgmt-01"
+    Name = "aws-nacl-mgmt-01"
 }
 }
 #subnets attachement
