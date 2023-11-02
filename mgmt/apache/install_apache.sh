@@ -19,7 +19,7 @@ echo "<!DOCTYPE html>
     <meta charset="utf-8" />
 </head>
 <body>
-<h1>ON-X Cloud Hybride (AWS + On Premise)</h1>
+<h1>Cloud Hybride (AWS + On Premise)</h1>
 <p> Ceci est une page de test.</p>
 <h2>Serveur 1</h2>
 </body>
